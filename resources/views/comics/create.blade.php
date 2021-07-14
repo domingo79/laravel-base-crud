@@ -23,7 +23,7 @@
             </div>
             <div class="form-group">
                 <label for="price">Price</label>
-                <input type="number" name="price" id="price" class="form-control" placeholder="enter price"
+                <input type="number" step="any" name="price" id="price" class="form-control" placeholder="enter price"
                     aria-describedby="helpId">
                 <small id="helpId" class="text-muted">Enter Price</small>
             </div>

@@ -3,8 +3,8 @@
 
 @section('content')
     <h1>Show Page</h1>
-    <h1>{{ $comic->title }}</h1>
-
-    <div>Series: {{ $comic->series }}</div>
-    <div>Price: {{ $comic->price }}</div>
+    <h2>{{ $comic->title }}</h2>
+    <div>{{ $comic->series }}</div>
+    <div>{{ $comic->price }}</div>
+    <img src="{{ $comic->url }}" alt="">
 @endsection
