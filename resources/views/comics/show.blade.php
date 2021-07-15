@@ -3,23 +3,28 @@
 
 @section('content')
     <div class="container">
+        <h1>Comic: {{ $comic->title }}</h1>
 
-        <h1>Show Page</h1>
-        <h2>{{ $comic->title }}</h2>
-        <div>{{ $comic->series }}</div>
-        <div>$ {{ $comic->price }}</div>
-        <img src="{{ $comic->url }}" alt="">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="{{ $comic->url }}" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"> {{ $comic->series }}</h5>
+                        <p class="card-text">sommario da aggiungere This is a wider card with supporting text below as a
+                            natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted"> $ {{ $comic->price }}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <form action="{{ route('comics.create') }}">
-            @csrf
-            <button class="btn btn-success btn-sm">Add Comic</button>
-        </form>
-        <form action="{{ route('comics.edit', $comic->id) }}">
-            @csrf
-            <button class="btn btn-warning btn-sm">Edit Comic</button>
-        </form>
-
-        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#comic-{{ $comic->id }}">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger btn-sm d-block mt-3" data-toggle="modal"
+            data-target="#comic-{{ $comic->id }}">
             Delete
         </button>
         <!-- Modal -->
@@ -48,6 +53,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 @endsection
