@@ -2,8 +2,10 @@
 @section('title', 'Show Page')
 
 @section('content')
+
     <div class="container">
-        <h1>Comic: {{ $comic->title }}</h1>
+        <h2 class="card-title"> Comic: {{ $comic->title }}</h2>
+
 
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row no-gutters">
@@ -13,9 +15,7 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title"> {{ $comic->series }}</h5>
-                        <p class="card-text">sommario da aggiungere This is a wider card with supporting text below as a
-                            natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">{{ $comic->summary }}</p>
                         <p class="card-text"><small class="text-muted"> $ {{ $comic->price }}</small></p>
                     </div>
                 </div>

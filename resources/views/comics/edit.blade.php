@@ -23,6 +23,10 @@
                 <small id="helpId" class="text-muted">Add your comic serie</small>
             </div>
             <div class="form-group">
+                <label for="summary">Content</label>
+                <textarea class="form-control" name="summary" id="summary" rows="3">{{ $comic->summary }}</textarea>
+            </div>
+            <div class="form-group">
                 <label for="price">Price</label>
                 <input type="number" step="any" name="price" id="price" class="form-control" placeholder="enter price"
                     aria-describedby="helpId" value="{{ $comic->price }}">

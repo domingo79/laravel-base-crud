@@ -11,7 +11,7 @@
                     <th>ID</th>
                     <th>TITLE</th>
                     <th>SERIES</th>
-                    <th>SUMMARY da aggiunger</th>
+                    <th>CONTENT</th>
                     <th>ACTION</th>
                 </tr>
             </thead>
@@ -22,7 +22,7 @@
                         <td><a href="{{ route('comics.show', $comic->id) }}"><img width="100" src="{{ $comic->url }}"
                                     alt=""> </a> </td>
                         <td>{{ $comic->title }}</td>
-                        <td>da aggiungere il sommario</td>
+                        <td>{{ $comic->summary }}</td>
                         <td>
                             <a class="text-warning" href="{{ route('comics.edit', $comic->id) }}">Edit</a>
                             <a class="text-success" href="{{ route('comics.create', $comic->id) }}">Create</a>
