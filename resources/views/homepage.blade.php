@@ -33,5 +33,11 @@
         </a>
     </div>
 
+    <div class="container">
+        @foreach ($comics as $item)
 
+            <img src="{{ $item->url }}" alt="{{ $item->title }}">
+
+        @endforeach
+    </div>
 @endsection
