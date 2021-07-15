@@ -13,7 +13,7 @@
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" class="form-control" placeholder="add title"
                     aria-describedby="helpId">
-                <small id="helpId" class="text-muted">Add your comic title</small>
+                <small id="titleHelp" class="text-muted">Add your comic title</small>
             </div>
             <div class="form-group">
                 <label for="series">Serie</label>
@@ -33,7 +33,7 @@
                 <small id="coverHelper" class="text-muted">url for a cover image</small>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
 
         </form>
     </div>

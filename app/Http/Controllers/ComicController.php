@@ -37,6 +37,7 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        //  ddd($request->all());
         $comic = new Comic;
         $comic->title = $request->title;
         $comic->series = $request->series;
@@ -55,6 +56,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
+        // ddd($comic);
         return view("comics.show", compact("comic"));
     }
 

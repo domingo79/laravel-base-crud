@@ -10,6 +10,7 @@
             <div>{{ $comic->series }}</div>
             <div>{{ $comic->price }}</div>
             <img src="{{ $comic->url }}" alt="">
+            <a href="{{ route('comics.show', $comic->id) }}">#view</a>
         @endforeach
     </div>
 @endsection
