@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PageController@index');
 
 Route::resource("comics", ComicController::class);
+Route::resource("movies", MovieController::class);
