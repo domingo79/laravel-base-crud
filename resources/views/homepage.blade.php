@@ -33,11 +33,11 @@
         </a>
     </div>
 
-    <div class="container">
+    {{-- <div class="container">
         @foreach ($comics as $item)
 
             <img src="{{ $item->url }}" alt="{{ $item->title }}">
 
         @endforeach
-    </div>
+    </div> --}}
 @endsection

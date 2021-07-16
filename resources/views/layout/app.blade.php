@@ -25,6 +25,10 @@
     <header id="site_header">
         <nav>
             <a href="/"><img src="{{ asset('img/dc-logo.png') }}" alt=""></a>
+            {{-- @foreach (config('navigazione.menu') as $item)
+                <a href="{{ $item['href'] }}">{{ $item['text'] }}</a> --}}
+                {{-- class="{{ Route::currentRouteName() === $item['href'] ? 'active' : '' }}"> {{ $item['text'] }} --}}
+            {{-- @endforeach --}}
             <a href="/comics">Comics</a>
             {{-- <a href="/comics/create">Create</a>
             <a href="/comics/show">Show</a> --}}

@@ -16,6 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PageController@index');
 
-
 Route::resource("comics", ComicController::class);
-Route::resource("movies", MovieController::class);
+
+//la rotta resource contiene le 7 rotte
+// Route::resource("movies", MovieController::class);
+
+
+// Route::get('movies', 'MovieController@index')->name('movies');
+// Route::post('movies', 'MovieController@store')->name('movies.store');
+// Route::get('movies/create', 'MovieController@create')->name('movies.create');
+// Route::get('movies/{movie}', 'MovieController@show')->name('movies.show');
+// Route::get('movies/{movie}/edit', 'MovieController@edit')->name('movies.edit');
+// Route::put('movies/{movie}', 'MovieController@update')->name('movies.update');
+// Route::delete('movies/{movie}', 'MovieController@destroy')->name('movies.destroy');

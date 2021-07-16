@@ -38,12 +38,21 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         //  ddd($request->all());
-        $comic = new Comic;
-        $comic->title = $request->title;
-        $comic->series = $request->series;
-        $comic->price = $request->price;
-        $comic->url = $request->url;
-        $comic->save();
+        $validated = $request->validate([
+            'title' => 'required | min:5 | max:100',
+            'series' => 'required | min:5 | max:100',
+            'summary' => 'nullable',
+            'price' => 'required | numeric',
+            'url' => 'required'
+        ]);
+        Comic::create($validated);
+
+        // $comic = new Comic;
+        // $comic->title = $request->title;
+        // $comic->series = $request->series;
+        // $comic->price = $request->price;
+        // $comic->url = $request->url;
+        // $comic->save();
 
         return redirect()->route("comics.index");
     }
@@ -81,8 +90,16 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        $validated = $request->validate([
+            'title' => 'required | min:5 | max:100',
+            'series' => 'required | min:5 | max:100',
+            'summary' => 'required',
+            'price' => 'required | numeric',
+            'url' => 'required'
+        ]);
         //ddd($request->all(), $comic);
-        $comic->update($request->all());
+        // $comic->update($request->all());
+        $comic->update($validated);
         return redirect()->route('comics.show', $comic->id);
     }
 
